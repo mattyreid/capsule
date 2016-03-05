@@ -3083,3 +3083,385 @@ Processing by PagesController#index as HTML
   Rendered layouts/_nav_guest.html.erb (2.6ms)
   Rendered layouts/_nav.html.erb (9.0ms)
 Completed 200 OK in 654ms (Views: 616.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 20:53:30 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_nav_guest.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (8.2ms)
+Completed 200 OK in 660ms (Views: 637.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 23.240.159.192 at 2016-03-05 20:54:11 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (123.9ms)
+  Rendered layouts/_nav_guest.html.erb (0.6ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 278ms (Views: 263.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 21:17:23 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (10.8ms)
+Completed 200 OK in 591ms (Views: 575.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 23.240.159.192 at 2016-03-05 21:17:32 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (6.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (114.7ms)
+  Rendered layouts/_nav_guest.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (3.9ms)
+Completed 200 OK in 283ms (Views: 264.8ms | ActiveRecord: 0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUsernameToUsers (20160305212605)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (2.7ms)[0m  [1mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (47.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160305212605"]]
+  [1m[36m (48.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:14:08 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ArgumentError (comparison of Symbol with Class failed):
+  app/controllers/application_controller.rb:10:in `>'
+  app/controllers/application_controller.rb:10:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/pages_controller.rb:2:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (22.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (132.7ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:17:39 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ArgumentError (comparison of Symbol with Class failed):
+  app/controllers/application_controller.rb:10:in `>'
+  app/controllers/application_controller.rb:10:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/pages_controller.rb:2:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.1ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:19:18 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav_guest.html.erb (0.9ms)
+  Rendered layouts/_nav.html.erb (9.3ms)
+Completed 200 OK in 1017ms (Views: 980.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 23.240.159.192 at 2016-03-05 22:19:59 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (140.0ms)
+  Rendered layouts/_nav_guest.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (6.4ms)
+Completed 200 OK in 321ms (Views: 291.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 23.240.159.192 at 2016-03-05 22:21:00 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZuVrtf0ShXB+iZa3y6gcKZfp0D4mcl4c2XKc9U0nBovjb3H+FYvx7tq3e9dySPBG+fMSzjC85MIEKAfxv4SaQQ==", "user"=>{"username"=>"username", "email"=>"myusername@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'myusername@email.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["username", "username"], ["email", "myusername@email.com"], ["encrypted_password", "$2a$10$vl1PlHCDFl6K0/aT2QzfMeFyxvyg8eYNqoBDu/YXbjt7bV6ReO84K"], ["created_at", "2016-03-05 22:21:00.629210"], ["updated_at", "2016-03-05 22:21:00.629210"]]
+  [1m[36m (20.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 22:21:00.657657"], ["current_sign_in_at", "2016-03-05 22:21:00.657657"], ["last_sign_in_ip", "23.240.159.192"], ["current_sign_in_ip", "23.240.159.192"], ["sign_in_count", 1], ["updated_at", "2016-03-05 22:21:00.659707"], ["id", 4]]
+  [1m[35m (12.5ms)[0m  commit transaction
+Redirected to https://prattsule-mattyreid1.c9users.io/
+Completed 302 Found in 493ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:21:00 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (2.0ms)
+  Rendered layouts/_nav.html.erb (11.7ms)
+Completed 200 OK in 205ms (Views: 202.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:22:44 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (6.4ms)
+Completed 200 OK in 296ms (Views: 293.9ms | ActiveRecord: 0.3ms)
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:24:11 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (9.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (65.9ms)
+Completed 200 OK in 690ms (Views: 658.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:24:15 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (5.2ms)
+Completed 200 OK in 119ms (Views: 117.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:25:45 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (7.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (47.0ms)
+Completed 200 OK in 606ms (Views: 570.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 23.240.159.192 at 2016-03-05 22:28:13 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (8.5ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (48.9ms)
+Completed 200 OK in 603ms (Views: 573.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/user/username" for 23.240.159.192 at 2016-03-05 22:28:29 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"username"}
+  Rendered pages/profile.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (5.1ms)
+Completed 200 OK in 208ms (Views: 206.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/username" for 23.240.159.192 at 2016-03-05 22:37:22 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"username"}
+  Rendered pages/profile.html.erb within layouts/application (5.7ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.7ms)
+  Rendered layouts/_nav.html.erb (52.3ms)
+Completed 200 OK in 728ms (Views: 689.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 22:37:32 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav.html.erb (5.1ms)
+Completed 200 OK in 119ms (Views: 118.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 22:38:13 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (8.8ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (53.1ms)
+Completed 200 OK in 690ms (Views: 662.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 22:38:19 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (3.7ms)
+Completed 200 OK in 156ms (Views: 154.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 22:39:36 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (5.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (52.1ms)
+Completed 200 OK in 682ms (Views: 645.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 22:50:44 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (18.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.4ms)
+  Rendered layouts/_nav.html.erb (47.8ms)
+Completed 200 OK in 629ms (Views: 589.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 22:50:47 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (3.4ms)
+Completed 200 OK in 113ms (Views: 111.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 23:01:34 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (9.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (55.8ms)
+Completed 200 OK in 702ms (Views: 669.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 23:01:56 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (4.8ms)
+Completed 200 OK in 127ms (Views: 125.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/joe.php" for 23.240.159.192 at 2016-03-05 23:02:52 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as 
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.6ms)
+  Rendered layouts/_nav.html.erb (22.1ms)
+Completed 200 OK in 215ms (Views: 213.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/joo.php" for 23.240.159.192 at 2016-03-05 23:03:01 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as 
+  Parameters: {"id"=>"joo"}
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.9ms)
+  Rendered layouts/_nav.html.erb (26.7ms)
+Completed 200 OK in 201ms (Views: 199.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 23:03:16 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (1.1ms)
+  Rendered layouts/_nav.html.erb (4.6ms)
+Completed 200 OK in 164ms (Views: 162.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/joe" for 23.240.159.192 at 2016-03-05 23:03:41 +0000
+Cannot render console from 23.240.159.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"joe"}
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (4.9ms)
+Completed 200 OK in 172ms (Views: 170.3ms | ActiveRecord: 0.3ms)
