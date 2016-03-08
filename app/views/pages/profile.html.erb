@@ -2,6 +2,7 @@
     <div class="col-xs-12">
         <div class="jumbotron">
             <%= @username %>
+        </div>
     </div>
 </div>
 <!-- begin row 2. -->
@@ -13,12 +14,17 @@
           </div>
         </div>
     </div>
+    
     <div class="col-xs-6">
+      <%= render '/components/posts_form' %>
+      
+      <% for @p in @posts %>
         <div class="panel panel-default">
           <div class="panel-body">
-            <p>posts</p>
+            <p><%= @p.content %></p>
           </div>
         </div>
+        <% end %>
     </div>
     <div class="col-xs-3">
         <div class="panel panel-default">
@@ -26,11 +32,6 @@
             <p>who to follow</p>
           </div>
         </div>
-    </div>
-</div>
-<!-- begin row 2. -->
-<div class="row">
-  <div class="col-xs-3 col-xs-offset-9">
         <div class="panel panel-default">
           <div class="panel-body">
             <p>trends</p>
@@ -38,3 +39,4 @@
         </div>
     </div>
 </div>
+
